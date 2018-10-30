@@ -1,0 +1,71 @@
+<div id="addEmployeeModal" style="margin: 10px 0;display: none;">
+    <div class="row">
+        <fieldset style="margin: 0!important;padding-top: 0!important;">
+            <legend>Add Employee</legend>
+            <form id="addEmployeeForm" data-abide="" class="" autocomplete="off" novalidate method="post">
+                {% csrf_token %}
+                <div class="row" style="margin-top: 3%">
+                    <div class="large-3 medium-6 small-4 columns left" style="font-size: 14px;font-weight: bold;padding-top: 12px" required>
+                        * Employee Name
+                    </div>
+                    <div class="large-3 medium-6 small-8 column left">
+                        <input id="employeeName" type="text" name="employeeName">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-3 medium-6 small-4 columns left" style="font-size: 14px;font-weight: bold;padding-top: 12px">
+                        Designation
+                    </div>
+                    <div class="large-3 medium-6 small-8 column left">
+                        <input id="designation" type="text" name="designation">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-3 medium-6 small-4 columns left" style="font-size: 14px;font-weight: bold;padding-top: 12px">
+                        Date of Joining
+                    </div>
+                    <div class="large-3 medium-6 small-8 column left">
+                        <input id="joiningDate" type="date" name="joiningDate">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 medium-6 small-4 columns left" style="font-size: 14px;font-weight: bold;padding-top: 12px">
+                        Mobile Number
+                    </div>
+                    <div class="large-3 medium-6 small-8 column left">
+                        <input id="mobileNumber" type="number" name="mobileNumber">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-3 medium-6 small-4 columns left" style="font-size: 14px;font-weight: bold;padding-top: 12px">
+                        * Email
+                    </div>
+                    <div class="large-3 medium-6 small-8 column left">
+                        <input id="employeeEmail" type="email" name="employeeEmail" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-3 medium-6 small-4 columns left" style="font-size: 14px;font-weight: bold;padding-top: 12px">
+                        Address
+                    </div>
+                    <div class="large-3 medium-6 small-8 column left">
+                        <textarea id="address" name="address"></textarea>
+                    </div>
+                </div>
+
+                <div class="row" style="padding-top: 17px;padding-bottom: 20px">
+                    <div class="small-8 columns" style="text-align: center;">
+                        <a id="saveEmployeeDetails" class="sm-btn">
+                            <div class="preloader employee-info " style="display: none;"></div>
+                            Submit</a>
+                        <a id="closeAddEmployeeModal" class="sm-btn">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+</div>

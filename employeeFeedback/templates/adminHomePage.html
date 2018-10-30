@@ -1,0 +1,22 @@
+{% extends 'baseTemplate.html' %}
+
+{% block content %}
+    <div class="row" style="margin-top: 10px;">
+        <ul class="breadcrumbs">
+            <li><a href="/" title="Home" style="font-size: 14px;text-transform: capitalize;">Home</a></li>
+            <li><a title="Admin Home Page" style="font-size: 14px;text-transform: capitalize;">Admin Home Page</a></li>
+        </ul>
+    </div>
+
+    <div class="row">
+        <a class="sm-btn add-employee-btn" style="margin-right: 10px;">Add Employee</a>
+        <a class="sm-btn" href="{% url 'performance-reviews' %}" style="margin-right: 10px;">Manage Performance Reviews</a>
+    </div>
+
+    <div class="row" style="margin-top: 15px;">
+        <h4>Employee List</h4>
+        <hr style="margin: 0;"/>
+    </div>
+
+    {% include 'addEmployeeTemplate.html' %}
+{% endblock content %}
